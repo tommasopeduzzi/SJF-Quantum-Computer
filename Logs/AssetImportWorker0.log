@@ -312,3 +312,45 @@ Received Import Request.
   path: Assets/QC.fbx
   artifactKey: Guid(0bd5085711ad340ef9a330f6f508f7b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/QC.fbx using Guid(0bd5085711ad340ef9a330f6f508f7b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32674ae36fadefacf04566271bddc302') in 2.132726 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1741.225106 seconds.
+  path: Assets/quantum_computer.fbx
+  artifactKey: Guid(5d1f30300527043f39cca8a488f27956) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/quantum_computer.fbx using Guid(5d1f30300527043f39cca8a488f27956) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c61952a9760d756e79b3a91497ec1466') in 1.099187 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.643308 seconds.
+  path: Assets/textures
+  artifactKey: Guid(dac10073fb0e7445fa846cfac521e91f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/textures using Guid(dac10073fb0e7445fa846cfac521e91f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82d78d584f11351a2fd2fea5725b51ac') in 0.003313 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.327835 seconds.
+  path: Assets/ExampleAssets/Materials/Controller.mat
+  artifactKey: Guid(3d2e36aacd7dc084b96e0755f1af4137) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/Controller.mat using Guid(3d2e36aacd7dc084b96e0755f1af4137) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '271f0d15b20c526c1bb2bd4402537b47') in 0.267029 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/ExampleAssets/Materials/Grid.mat
+  artifactKey: Guid(3f9336a53d1d2ea43895699cc52cb411) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/Grid.mat using Guid(3f9336a53d1d2ea43895699cc52cb411) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2483741e9f013c1fcb4842c045f937d') in 0.129894 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000356 seconds.
+  path: Packages/com.unity.xr.windowsmr/Tests/Runtime/Resources/Materials/YFlipColorMesh.mat
+  artifactKey: Guid(af4e1f6f711c4cb44935f0bb5fce8c5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.xr.windowsmr/Tests/Runtime/Resources/Materials/YFlipColorMesh.mat using Guid(af4e1f6f711c4cb44935f0bb5fce8c5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5744f85aebe5c12f8942c09522b110d5') in 0.020105 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000299 seconds.
+  path: Assets/ExampleAssets/Materials/Skybox Light.mat
+  artifactKey: Guid(3a408e788dcbed6429c8d22a01b32a76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExampleAssets/Materials/Skybox Light.mat using Guid(3a408e788dcbed6429c8d22a01b32a76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be2104d585b1997bd6bcd8f1a7b66f28') in 0.087096 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 230.092279 seconds.
+  path: Assets/QC.fbx
+  artifactKey: Guid(0bd5085711ad340ef9a330f6f508f7b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/QC.fbx using Guid(0bd5085711ad340ef9a330f6f508f7b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a78f8edbb59774c94ce8bb1d0965519') in 1.400668 seconds 
