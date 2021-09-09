@@ -1,2 +1,0 @@
-# SJF-Quantum-Computer
-test
