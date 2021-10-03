@@ -17,7 +17,6 @@ public class Interactable : MonoBehaviour
     private RawImage ImageUI;
     public Texture Image;
     public bool useImage;
-    public Vector3 AdditionalOffset;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +32,7 @@ public class Interactable : MonoBehaviour
         
     }
 
-    public void OnSelectedTextBox(){
+    public void OnSelectedText(){
         TitleBox.text = Name;
         TextBox.text = Text;
         ImageUI.texture = Image;
@@ -42,8 +41,8 @@ public class Interactable : MonoBehaviour
             Destroy(GameObject.Find("newChipLayer"));
     }
 
-    public void OnSelectedChipLayer(){
-        OnSelectedTextBox();
+    public void OnSelectedZoomAnimation(){
+        OnSelectedText();
         GameObject newChipLayer = Instantiate(ZoomObject);
         newChipLayer.name = "newChipLayer";
         newChipLayer.transform.DOMove(new  Vector3(-1.33f, 1.1f, -3.6f), 0.5f);
