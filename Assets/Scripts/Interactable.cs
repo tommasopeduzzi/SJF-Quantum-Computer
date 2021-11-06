@@ -9,6 +9,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Interactable : XRSimpleInteractable
 {
     public string Name;
+    [Multiline]
 	public string Text;
     public GameObject ZoomObject;
     private GameObject Dialog;
@@ -43,9 +44,10 @@ public class Interactable : XRSimpleInteractable
 
     public void OnSelectedZoomAnimation(){
         OnSelectedText();
+        Debug.Log("test");
         GameObject newChipLayer = Instantiate(ZoomObject);
         newChipLayer.name = "newChipLayer";
-        newChipLayer.transform.DOMove(new  Vector3(-1.33f, 1.1f, -3.6f), 0.5f);
+        newChipLayer.transform.DOMove(new  Vector3(-.891f, 1.93f, 2.109f), 0.5f);
         newChipLayer.transform.DORotate(new Vector3(0, 3, 0), 0.25f).SetLoops(-1, LoopType.Incremental);
         Destroy(newChipLayer.GetComponent<XRSimpleInteractable>());
         Destroy(newChipLayer.GetComponent<QOutline>());
