@@ -6,7 +6,7 @@ using TMPro;
 using DG.Tweening;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class Interactable : MonoBehaviour
+public class Interactable : XRSimpleInteractable
 {
     public string Name;
 	public string Text;
