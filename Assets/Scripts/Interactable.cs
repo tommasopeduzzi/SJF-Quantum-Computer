@@ -16,8 +16,10 @@ public class Interactable : XRSimpleInteractable
     private TextMeshProUGUI TitleBox;
     private TextMeshProUGUI TextBox;
     private RawImage ImageUI;
+    public Transform SpawnPoint;
     public Texture Image;
     public bool useImage;
+    public bool IsWindow;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,14 +45,23 @@ public class Interactable : XRSimpleInteractable
     }
 
     public void OnSelectedZoomAnimation(){
-        OnSelectedText();
-        Debug.Log("test");
-        GameObject newChipLayer = Instantiate(ZoomObject);
-        newChipLayer.name = "newChipLayer";
-        newChipLayer.transform.DOMove(new  Vector3(-.891f, 1.93f, 2.109f), 0.5f);
-        newChipLayer.transform.DORotate(new Vector3(0, 3, 0), 0.25f).SetLoops(-1, LoopType.Incremental);
-        Destroy(newChipLayer.GetComponent<XRSimpleInteractable>());
-        Destroy(newChipLayer.GetComponent<QOutline>());
+        if (!IsWindow)
+        {
+            OnSelectedText();
+            Debug.Log("test");
+            GameObject newChipLayer = Instantiate(ZoomObject);
+            newChipLayer.name = "newChipLayer";
+            //newChipLayer.transform.DOMove(new  Vector3(-.891f, 1.93f, 2.109f), 0.5f);
+            newChipLayer.transform.DOMove(SpawnPoint.transform.position, 0.5f);
+            newChipLayer.transform.DORotate(new Vector3(0, 3, 0), 0.25f).SetLoops(-1, LoopType.Incremental);
+            Destroy(newChipLayer.GetComponent<XRSimpleInteractable>());
+            Destroy(newChipLayer.GetComponent<QOutline>());
+        }
+        else
+        {
+            this.gameObject.SetActive(false);
+        }
+       
     }
 
     public void OnSelectedCilinderAnimation(){
