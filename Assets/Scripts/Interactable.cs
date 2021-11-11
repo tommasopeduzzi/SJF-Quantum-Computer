@@ -13,6 +13,8 @@ public class Interactable : XRSimpleInteractable
 	public string Text;
     public GameObject ZoomObject;
     private GameObject Dialog;
+    public  GameObject Logo;
+    public GameObject[] Lights;
     private TextMeshProUGUI TitleBox;
     private TextMeshProUGUI TextBox;
     private RawImage ImageUI;
@@ -23,6 +25,7 @@ public class Interactable : XRSimpleInteractable
     // Start is called before the first frame update
     void Start()
     {
+        
         Dialog = GameObject.Find("Canvas").transform.GetChild(0).gameObject;
         TitleBox = Dialog.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         TextBox = Dialog.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
@@ -60,6 +63,11 @@ public class Interactable : XRSimpleInteractable
         else
         {
             this.gameObject.SetActive(false);
+            Logo.SetActive(false);
+            for(int i = 0; i < Lights.Length; i++)
+            {
+                Lights[i].SetActive(true);
+            }
         }
        
     }
