@@ -13,14 +13,20 @@ public class Interactable : XRSimpleInteractable
 	public string Text;
     public GameObject ZoomObject;
     private GameObject Dialog;
+    public  GameObject Logo;
+    public GameObject[] Lights;
     private TextMeshProUGUI TitleBox;
     private TextMeshProUGUI TextBox;
     private RawImage ImageUI;
+    public Transform SpawnPoint;
     public Texture Image;
     public bool useImage;
+    public bool IsWindow;
+    public GameObject window;
     // Start is called before the first frame update
     void Start()
     {
+        
         Dialog = GameObject.Find("Canvas").transform.GetChild(0).gameObject;
         TitleBox = Dialog.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         TextBox = Dialog.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
@@ -43,14 +49,30 @@ public class Interactable : XRSimpleInteractable
     }
 
     public void OnSelectedZoomAnimation(){
-        OnSelectedText();
-        Debug.Log("test");
-        GameObject newChipLayer = Instantiate(ZoomObject);
-        newChipLayer.name = "newChipLayer";
-        newChipLayer.transform.DOMove(new  Vector3(-.891f, 1.93f, 2.109f), 0.5f);
-        newChipLayer.transform.DORotate(new Vector3(0, 3, 0), 0.25f).SetLoops(-1, LoopType.Incremental);
-        Destroy(newChipLayer.GetComponent<XRSimpleInteractable>());
-        Destroy(newChipLayer.GetComponent<QOutline>());
+        if (!IsWindow)
+        {
+            
+            OnSelectedText();
+            Debug.Log("test");
+            GameObject newChipLayer = Instantiate(ZoomObject);
+            newChipLayer.name = "newChipLayer";
+            //newChipLayer.transform.DOMove(new  Vector3(-.891f, 1.93f, 2.109f), 0.5f);
+            newChipLayer.transform.DOMove(SpawnPoint.transform.position, 0.5f);
+            newChipLayer.transform.DORotate(new Vector3(0, 3, 0), 0.25f).SetLoops(-1, LoopType.Incremental);
+            Destroy(newChipLayer.GetComponent<XRSimpleInteractable>());
+            Destroy(newChipLayer.GetComponent<QOutline>());
+        }
+        else
+        {
+            
+            window.SetActive(false);
+            Logo.SetActive(false);
+            for(int i = 0; i < Lights.Length; i++)
+            {
+                Lights[i].SetActive(true);
+            }
+        }
+       
     }
 
     public void OnSelectedCilinderAnimation(){
