@@ -21,8 +21,7 @@ public class Interactable : XRSimpleInteractable
     public Transform SpawnPoint;
     public Texture Image;
     public bool useImage;
-    public bool IsWindow;
-    public GameObject window;
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -49,9 +48,9 @@ public class Interactable : XRSimpleInteractable
     }
 
     public void OnSelectedZoomAnimation(){
-        if (!IsWindow)
-        {
-            
+
+
+       
             OnSelectedText();
             Debug.Log("test");
             GameObject newChipLayer = Instantiate(ZoomObject);
@@ -61,19 +60,9 @@ public class Interactable : XRSimpleInteractable
             newChipLayer.transform.DORotate(new Vector3(0, 3, 0), 0.25f).SetLoops(-1, LoopType.Incremental);
             Destroy(newChipLayer.GetComponent<XRSimpleInteractable>());
             Destroy(newChipLayer.GetComponent<QOutline>());
-        }
-        else
-        {
-            
-            window.SetActive(false);
-            Logo.SetActive(false);
-            for(int i = 0; i < Lights.Length; i++)
-            {
-                Lights[i].SetActive(true);
-            }
-        }
-       
+        
     }
+   
 
     public void OnSelectedCilinderAnimation(){
         var startpos = transform.position;
