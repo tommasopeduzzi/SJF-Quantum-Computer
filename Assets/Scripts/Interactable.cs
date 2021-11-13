@@ -22,6 +22,7 @@ public class Interactable : XRSimpleInteractable
     public Texture Image;
     public bool useImage;
     public bool IsWindow;
+    public GameObject window;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +51,7 @@ public class Interactable : XRSimpleInteractable
     public void OnSelectedZoomAnimation(){
         if (!IsWindow)
         {
+            
             OnSelectedText();
             Debug.Log("test");
             GameObject newChipLayer = Instantiate(ZoomObject);
@@ -62,7 +64,8 @@ public class Interactable : XRSimpleInteractable
         }
         else
         {
-            this.gameObject.SetActive(false);
+            
+            window.SetActive(false);
             Logo.SetActive(false);
             for(int i = 0; i < Lights.Length; i++)
             {
